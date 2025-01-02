@@ -85,6 +85,12 @@ export default function Page() {
         }
     }
 
+    const clearForm = () => {
+        setName('');
+        setRemark('');
+        setId(0);
+    }
+
     return (
         <div className='card mt-3'>
             <div className='card-header'>ประเภทอาหาร/เครื่องดื่ม</div>
@@ -92,6 +98,7 @@ export default function Page() {
                 <button className='btn btn-primary'
                     data-bs-toggle="modal"
                     data-bs-target="#modalFoodType"
+                    onClick={clearForm}
                 >
                     <i className='fa fa-plus me-2'></i>เพิ่มรายการ
                 </button>
